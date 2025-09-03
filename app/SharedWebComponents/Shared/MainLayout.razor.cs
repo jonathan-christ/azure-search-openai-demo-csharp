@@ -1,10 +1,22 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
+using MudBlazor.Utilities;
 
 namespace SharedWebComponents.Shared;
 
 public sealed partial class MainLayout
 {
-    private readonly MudTheme _theme = new();
+    private readonly MudTheme _theme = new()  {
+        Palette = new PaletteLight()
+        {
+            // "Darkish pastel yellow" color
+            Primary = Colors.Yellow.Lighten1,
+        },
+        PaletteDark = new PaletteDark()
+        {
+            // You can define a different color for dark mode or leave it at default
+            Primary = new MudColor("#FFB81C"),
+        },
+    };
     private bool _drawerOpen = true;
     private bool _settingsOpen = false;
     private SettingsPanel? _settingsPanel;
