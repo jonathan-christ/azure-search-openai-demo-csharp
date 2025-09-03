@@ -23,8 +23,8 @@ public sealed partial class MainLayout
 
     private bool _isDarkTheme
     {
-        get => LocalStorage.GetItem<bool>(StorageKeys.PrefersDarkTheme);
-        set => LocalStorage.SetItem<bool>(StorageKeys.PrefersDarkTheme, value);
+        get => true;
+        set => LocalStorage.SetItem<bool>(StorageKeys.PrefersDarkTheme, true);
     }
 
     private bool _isReversed
